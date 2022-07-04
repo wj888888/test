@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "73750d44-b80d-47fe-9bf7-33f5e85a0800",
+		"name": "wj-postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{host}}/mcp/pc/pcsearch",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.IsPrint).to.eql(false);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Origin",
+						"value": "https://www.baidu.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=test&fenlei=256&rsv_pq=8d6764de0000702f&rsv_t=c399fIF8yts57P6Zvgg9EZFy1sEtuLRiLMmMnb8wtUSrKk%2B1ucMdgLwD8Go&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=5&rsv_sug1=3&rsv_sug7=101&rsv_sug2=0&rsv_btype=i&prefixsug=test&rsp=5&inputT=867&rsv_sug4=1532"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "zh-CN,zh;q=0.9"
+					},
+					{
+						"key": "Cookie",
+						"value": "BIDUPSID=8800E758A14C2BEF312D52BDB11278ED; PSTM=1648174422; BAIDUID=8800E758A14C2BEFAF1E5FF14302D1F9:FG=1; MCITY=-179%3A131%3A; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; H_PS_PSSID=36548_36726_36454_31660_36692_36166_36695_36698_36570_36073_36774_36743_36763_36768_36764_26350_36681_36469_36714; delPer=0; PSINO=2"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"invoke_info\":{\"pos_1\":[{}],\"pos_2\":[{}],\"pos_3\":[{}]}}"
+				},
+				"url": {
+					"raw": "{{host}}/mcp/pc/pcsearch",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"mcp",
+						"pc",
+						"pcsearch"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
